@@ -11,7 +11,7 @@ export default function Skills() {
         return <Cpu className="text-brand-blue" size={20} />;
       case 'tools-build':
         return <Terminal className="text-brand-cyan" size={20} />;
-      case 'design-testing':
+      case 'other-skills':
         return <Compass className="text-brand-purple" size={20} />;
       default:
         return <Cpu size={20} />;
@@ -31,7 +31,7 @@ export default function Skills() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
-            Technical Superpowers
+            Technical Skills & Expertise
           </h2>
           <p className="text-slate-400 text-sm sm:text-base">
             With 2+ years of dedicated professional refinement, I have consolidated a stack of modern, pixel-perfect layout mechanisms and progressive development workflows.
@@ -61,7 +61,7 @@ export default function Skills() {
                     : 'bg-slate-900/50 hover:bg-slate-900 border border-slate-800 text-slate-400 hover:text-white'
                 }`}
               >
-                {group.title.split(' ')[0]} Focus
+                {group.title.split(' ')[0]} 
               </button>
             ))}
           </div>
@@ -140,7 +140,7 @@ export default function Skills() {
           })}
         </div>
 
-        {/* Feature Banner */}
+        {/* Feature Banner
         <div className="mt-16 rounded-2xl bg-gradient-to-r from-brand-blue/10 via-brand-cyan/5 to-brand-purple/10 border border-slate-800/60 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-start gap-4">
             <div className="p-3 bg-slate-900 rounded-xl border border-slate-800 text-brand-cyan shrink-0 hidden sm:block">
@@ -165,7 +165,7 @@ export default function Skills() {
           >
             Ask Questions
           </button>
-        </div>
+        </div> */}
 
       </div>
     </section>

@@ -2,12 +2,12 @@ import { Project, SkillGroup, ExperienceItem, Testimonial } from './types';
 
 export const PERSONAL_INFO = {
   name: 'Hilmi Zuhri',
-  title: 'Front-End Engineer & UI Builder',
+  title: 'Web Developer',
   bio: 'A passionate developer specializing in crafting premium, performant, and responsive web user interfaces. With 2+ years of professional front-end experience, I bridge the gap between design systems and semantic, maintainable code using React, TypeScript, and modern styling solutions.',
   location: 'Jakarta, Indonesia (Available for Remote Work)',
   email: 'zuhri.hilmi@gmail.com',
   github: 'https://github.com/hilmizuhri',
-  linkedin: 'https://linkedin.com/in/hilmizuhri',
+  linkedin: 'https://www.linkedin.com/in/hilmi-zuhri-96b9a62b8',
   avatarInitials: 'HZ',
   experienceYears: 2,
   completedProjects: 14,
@@ -111,22 +111,22 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     id: 'tools-build',
-    title: 'Frameworks, Tools & Building',
+    title: 'Frameworks Tools & Building',
     skills: [
       { name: 'Next.js (App Router)', level: 80, category: 'tools-libs', yearsOfExp: 1 },
       { name: 'Vite & esbuild', level: 88, category: 'tools-libs', yearsOfExp: 2 },
       { name: 'Git & GitHub Collaboration', level: 86, category: 'tools-libs', yearsOfExp: 2 },
       { name: 'Motion / Framer Motion', level: 85, category: 'tools-libs', yearsOfExp: 1 },
-      { name: 'npm / pnpm / yarn', level: 90, category: 'tools-libs', yearsOfExp: 2 },
+      { name: 'ShadCN UI', level: 90, category: 'tools-libs', yearsOfExp: 2 },
     ]
   },
   {
-    id: 'design-testing',
-    title: 'UI Design & Quality Assurance',
+    id: 'other-skills',
+    title: 'Other Skills',
     skills: [
-      { name: 'Figma UI Prototyping', level: 82, category: 'design-other', yearsOfExp: 2 },
-      { name: 'Browser Developer Tools Tuning', level: 88, category: 'design-other', yearsOfExp: 2 },
-      { name: 'Responsive Layout Architecture', level: 95, category: 'design-other', yearsOfExp: 2 },
+      { name: 'Machine Learning Fundamentals', level: 82, category: 'design-other', yearsOfExp: 2 },
+      { name: 'Java', level: 88, category: 'design-other', yearsOfExp: 2 },
+      { name: 'Python', level: 95, category: 'design-other', yearsOfExp: 2 },
       { name: 'RESTful API Integration', level: 85, category: 'design-other', yearsOfExp: 2 },
       { name: 'Web Vitals Performance Audit', level: 78, category: 'design-other', yearsOfExp: 1.5 },
     ]

@@ -23,7 +23,7 @@ export default function Header({ activeSection }: HeaderProps) {
     { label: 'Skills', href: '#skills', id: 'skills' },
     { label: 'Projects', href: '#projects', id: 'projects' },
     { label: 'Experience', href: '#experience', id: 'experience' },
-    { label: 'Testimonials', href: '#testimonials', id: 'testimonials' },
+    // { label: 'Testimonials', href: '#testimonials', id: 'testimonials' },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -68,7 +68,7 @@ export default function Header({ activeSection }: HeaderProps) {
                 {PERSONAL_INFO.name}
               </span>
               <span className="text-[10px] font-mono text-slate-400 tracking-wider">
-                FRONT-END DEVS
+                WEB DEVS
               </span>
             </div>
           </a>

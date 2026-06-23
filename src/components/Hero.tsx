@@ -42,7 +42,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/65 border border-slate-700/50 w-fit mb-6 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
               <span className="text-xs font-mono font-medium text-slate-300 uppercase tracking-wider">
-                Available for worldwide roles
+                Available for Work
               </span>
             </div>
 

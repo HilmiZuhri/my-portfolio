@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FolderKanban, Github, ExternalLink, X, Check, Code, Sparkles, Heart } from 'lucide-react';
+import { FolderKanban, Github, ExternalLink, X, Check, Code, Sparkles } from 'lucide-react';
 import { PROJECTS } from '../data';
 import { Project } from '../types';
 
@@ -11,7 +11,7 @@ export default function Projects() {
     ? PROJECTS
     : PROJECTS.filter(p => p.category === filter);
 
-  // Render a custom high-fidelity SVG graphic representation for each project type
+  // Render SVG fallback jika file gambar tidak disediakan
   const renderProjectGraphic = (imageType: Project['imageType']) => {
     switch (imageType) {
       case 'analytics':
@@ -169,8 +169,28 @@ export default function Projects() {
           </div>
         );
       default:
-        return null;
+        return (
+          <div className="w-full h-44 bg-slate-950 flex items-center justify-center border-b border-slate-800/60 text-slate-700">
+            <Code size={40} />
+          </div>
+        );
     }
+  };
+
+  // Fungsi baru untuk menentukan apakah me-render gambar local atau SVG fallback
+  const renderProjectVisual = (project: Project) => {
+    if (project.image) {
+      return (
+        <div className="w-full h-44 relative overflow-hidden border-b border-slate-800/60 bg-slate-950">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+      );
+    }
+    return renderProjectGraphic(project.imageType);
   };
 
   return (
@@ -199,8 +219,8 @@ export default function Projects() {
             {[
               { id: 'all', label: 'All Items' },
               { id: 'web-app', label: 'Web Apps' },
-              { id: 'tool', label: 'Developer Tools' },
-              { id: 'landing-page', label: 'E-Comm / Landing' }
+              { id: 'landing-page', label: 'E-Comm / Landing' },
+              { id: 'tool', label: 'Other' }
             ].map((cat) => (
               <button
                 key={cat.id}
@@ -228,8 +248,8 @@ export default function Projects() {
               className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-slate-900/35 hover:bg-slate-900/60 border border-slate-800/70 hover:border-slate-700/80 shadow-lg hover:shadow-2xl hover:shadow-brand-blue/5 transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
             >
               <div>
-                {/* SVG Mockup illustration header */}
-                {renderProjectGraphic(project.imageType)}
+                {/* Visual Image / SVG Mockup */}
+                {renderProjectVisual(project)}
 
                 {/* Card Content Text */}
                 <div className="p-6 md:p-8">
@@ -274,16 +294,18 @@ export default function Projects() {
         {selectedProject && (
           <div
             id="project-detail-modal"
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#090d16]/90 backdrop-blur-sm"
+            onClick={() => setSelectedProject(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#090d16]/90 backdrop-blur-sm cursor-pointer"
           >
             <div
-              className="bg-slate-900 border border-slate-800/90 rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col animate-in fade-in zoom-in-95 duration-200"
+              onClick={(e) => e.stopPropagation()}
+              className="bg-slate-900 border border-slate-800/90 rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col animate-in fade-in zoom-in-95 duration-200 cursor-default"
             >
               {/* Scrollable Container */}
               <div className="overflow-y-auto flex-1">
                 {/* Visual Cover Header */}
                 <div className="relative">
-                  {renderProjectGraphic(selectedProject.imageType)}
+                  {renderProjectVisual(selectedProject)}
                   <button
                     id="modal-close"
                     onClick={(e) => {
@@ -304,7 +326,7 @@ export default function Projects() {
                     <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-brand-blue/15 text-brand-blue border border-brand-blue/20">
                       {selectedProject.category.replace('-', ' ')}
                     </span>
-                    <span className="text-xs text-slate-550 font-mono text-slate-500">
+                    <span className="text-xs text-slate-500 font-mono">
                       Duration: {selectedProject.duration}
                     </span>
                   </div>
@@ -314,7 +336,7 @@ export default function Projects() {
                   </h3>
 
                   {/* Core layout info overview bar */}
-                  <div className="grid grid-cols-2 gap-4 p-4.5 rounded-xl bg-slate-950/50 border border-slate-850 border-slate-800/40 mb-6 text-sm font-mono text-slate-400">
+                  <div className="grid grid-cols-2 gap-4 p-4.5 rounded-xl bg-slate-950/50 border border-slate-800/40 mb-6 text-sm font-mono text-slate-400">
                     <div>
                       <span className="text-slate-500 text-xs uppercase block">MY ROLE:</span>
                       <span className="text-white font-semibold">{selectedProject.role}</span>
@@ -326,11 +348,11 @@ export default function Projects() {
                   </div>
 
                   {/* Detailed Description */}
-                  <div className="space-y-4 text-slate-310 text-slate-300 leading-relaxed mb-8 text-sm sm:text-base">
+                  <div className="space-y-4 text-slate-300 leading-relaxed mb-8 text-sm sm:text-base">
                     <p>{selectedProject.detailedDescription}</p>
                   </div>
 
-                  {/* Built-in high value checklist bullet lists */}
+                  {/* Built-in checklist */}
                   <div className="mb-8">
                     <h4 className="flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider mb-4">
                       <Sparkles size={16} className="text-brand-cyan" />
@@ -350,7 +372,7 @@ export default function Projects() {
                     </ul>
                   </div>
 
-                  {/* Tech stack buttons label links */}
+                  {/* Tech stack buttons */}
                   <div className="mb-8">
                     <h4 className="flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider mb-4">
                       <Code size={16} className="text-brand-blue" />
@@ -360,7 +382,7 @@ export default function Projects() {
                       {selectedProject.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs font-mono font-medium px-3 py-1 rounded-xl bg-slate-950 text-slate-350 text-slate-300 border border-slate-850 border-slate-800/80"
+                          className="text-xs font-mono font-medium px-3 py-1 rounded-xl bg-slate-950 text-slate-300 border border-slate-800/80"
                         >
                           {tech}
                         </span>
@@ -368,7 +390,7 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  {/* Quick Action links inside modal footer */}
+                  {/* Quick Action links */}
                   <div className="flex flex-wrap items-center justify-between pt-6 border-t border-slate-800/40 gap-4">
                     <span className="text-xs font-mono text-slate-500">
                       HILMI ZUHRI &bull; CASE STUDY
@@ -388,19 +410,13 @@ export default function Projects() {
                       )}
                       <a
                         id={`modal-demolink-${selectedProject.id}`}
-                        href="#contact"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setSelectedProject(null);
-                          setTimeout(() => {
-                            const target = document.querySelector('#contact');
-                            if (target) target.scrollIntoView({ behavior: 'smooth' });
-                          }, 300);
-                        }}
+                        href={selectedProject.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
                         className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-blue to-brand-cyan hover:scale-[1.02] text-white text-xs font-bold transition-all shadow-md active:scale-95 cursor-pointer"
                       >
                         <ExternalLink size={14} />
-                        Request Demo Setup
+                        Live Demo
                       </a>
                     </div>
                   </div>

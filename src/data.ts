@@ -1,3 +1,4 @@
+import image from "../assets/image.png";
 import { Project, SkillGroup, ExperienceItem, Testimonial } from './types';
 
 export const PERSONAL_INFO = {
@@ -16,24 +17,26 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS: Project[] = [
   {
-    id: 'devflow-dashboard',
-    title: 'DevFlow Dashboard',
-    shortDescription: 'An interactive productivity workspace for developers, featuring real-time telemetry, visual work logs, and performance metrics.',
-    detailedDescription: 'DevFlow is a developer-centric command dashboard with beautiful visualizations, rich widget workspaces, and task timers. It enables users to audit their coding intervals, manage active sprints, and view local server health telemetry within an elegant, performance-tuned environment.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Motion'],
-    role: 'Lead Creator',
-    duration: '2 Months (Current Iteration)',
+    id: 'TaskFlow',
+    title: 'TaskFlow',
+    shortDescription: 'A to-do list app designed to help you capture, organize, prioritize, and track your daily tasks and deadlines so you can manage your work and personal life more efficiently',
+    detailedDescription: 'TaskFlow is a highly polished, interactive task and workflow manager designed with a modern, responsive interface. It offers live status statistics, collapsible advanced search and filters, and a seamless dual-layout workspace (List View and Board View). Key highlight features include automatic deadline reminders and intuitive drag-and-drop mechanics to adjust task status or re-prioritize items in real-time.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'localstorage persistence', 'Motion/framer Motion'],
+    role: 'Solo Project',
+    duration: '2 Weeks (Current Iteration)',
     category: 'web-app',
     imageType: 'analytics',
-    githubUrl: 'https://github.com/hilmizuhri/devflow-board',
-    liveUrl: '#',
+    image: '/assets/image1.png',
+    githubUrl: 'https://github.com/HilmiZuhri/Advanced-Todolist-App-v2',
+    liveUrl: 'https://advanced-todolist-app-v2.vercel.app/',
     features: [
-      'Interactive Git commit log parser and time-series productivity graph.',
-      'Custom Pomodoro focus routine block with built-in ambient workspace sounds simulated state.',
-      'Active developer checklist and drag-reorder sprint columns.',
-      'Local CPU and RAM load visualization simulator using standard Web APIs.'
+      'Adaptive User Interface & Aesthetic Design: responsive layouts, dark/light mode toggle, and smooth animations.',
+      'Interactive Workspace Views: dual layout system with List View and Board View for task management.',
+      'Task Reminders & Notification Engine: automatic deadline alerts and real-time status updates.',
+      'Fully-Featured Task Creation & Editing: add, edit, delete, and prioritize tasks with intuitive drag-and-drop functionality.',
+      'Advanced Search & Filter System: search tasks by keywords, filter by status, priority, or due date, and save custom views for quick access.'
     ],
-    techStack: ['React 19', 'TypeScript 5', 'Tailwind CSS v4', 'Recharts', 'lucide-react', 'motion/react']
+    techStack: ['React 19', 'TypeScript 5', 'Tailwind CSS v4', 'lucide-react', 'framer Motion', 'localStorage Persistence']
   },
   {
     id: 'aura-ui-sandbox',
@@ -76,24 +79,46 @@ export const PROJECTS: Project[] = [
     techStack: ['React 19', 'TypeScript', 'Tailwind CSS v4', 'localStorage Persistence', 'lucide-react']
   },
   {
-    id: 'zenith-print-shop',
-    title: 'Zenith Fine Print Shop',
-    shortDescription: 'An immersive digital retail catalog featuring advanced grid positioning and visual cart mechanics.',
-    detailedDescription: 'Zenith is a conceptual shopping platform specializing in high-contrast typographic posters and art prints. Built to demonstrate advanced masonry layouts, custom sorting queries, clean cart animations, and cohesive aesthetic alignments.',
-    tags: ['React', 'Tailwind CSS', 'E-Commerce State'],
+    id: 'zakiah-shop',
+    title: 'Zakiah Shop',
+    shortDescription: 'A POS cashier system with cloud-based transaction.',
+    detailedDescription: 'This is a web-based Point of Sale (POS) cashier system that has cloud-based transaction and inventory management system that can be accessed anytime and anywhere thru a browser.',
+    tags: ['React', 'Tailwind CSS', 'TypeScript', 'shadcn/ui'],
     role: 'Core Designer & Developer',
     duration: '4 Weeks',
     category: 'landing-page',
     imageType: 'ecommerce',
-    githubUrl: 'https://github.com/hilmizuhri/zenith-shop',
-    liveUrl: '#',
+    image: '/assets/image.png',
+    githubUrl: 'https://github.com/hilmizuhri/POS-Cashier',
+    liveUrl: 'https://pos-cashier-one.vercel.app',
     features: [
-      'Fluid visual filter pipeline based on pricing, orientation, and color spectrums.',
-      'Full stateful slide-out cart supporting items quantity updates and interactive price tallies.',
-      'Form-validated step-by-step dummy shipping checkout simulation.',
-      'Staggered masonry graphic cards with high-contrast animations and responsive columns.'
+      'Core Transaction Sales: product selection, cart management, and receipt generation.',
+      'Inventory & Stock Management: add, edit, and remove products with real-time stock updates.',
+      'Customer & Loyalty Management: track customer purchases and offer discounts or promotions.',
+      'Employee Management: manage employee accounts and permissions for secure access to the system.',
+      'Reporting & Analytics: generate sales reports, track revenue, and analyze business performance with visual charts and graphs.'
     ],
-    techStack: ['React 19', 'Tailwind CSS v4', 'lucide-react', 'motion/react Client State']
+    techStack: ['React 19', 'Tailwind CSS v4', 'shadcn/ui', 'TypeScript']
+  },
+  {
+    id: 'profile-website',
+    title: 'Profile Website',
+    shortDescription: 'A personal profile website showcasing skills and projects.',
+    detailedDescription: 'A responsive personal profile website built with modern web technologies, featuring a clean design, CMS integration, and smooth user experience.',
+    tags: ['React', 'Tailwind CSS', 'TypeScript', 'framer Motion', 'sanity.io'],
+    role: 'Solo Project',
+    duration: '1 Weeks',
+    category: 'landing-page',
+    imageType: 'ecommerce',
+    image: '/assets/image0.png',
+    githubUrl: 'https://github.com/hilmizuhri/Portfolio-zaidah',
+    liveUrl: 'https://zaidah-izzawati.vercel.app',
+    features: [
+      'Dynamic Headless CMS Integration (Sanity.io): manage content and projects easily with a user-friendly interface.',
+      'Interactive Case Studies & Deep-Dive Modals: showcase project details with smooth animations and transitions.',
+      'Responsive Styling & Fluid Animations: ensure optimal viewing experience across devices with modern CSS techniques.'
+    ],
+    techStack: ['React 19', 'Tailwind CSS v4', 'framer Motion','sanity.io', 'TypeScript']
   }
 ];
 
@@ -128,7 +153,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
       { name: 'Java', level: 88, category: 'design-other', yearsOfExp: 2 },
       { name: 'Python', level: 95, category: 'design-other', yearsOfExp: 2 },
       { name: 'RESTful API Integration', level: 85, category: 'design-other', yearsOfExp: 2 },
-      { name: 'Web Vitals Performance Audit', level: 78, category: 'design-other', yearsOfExp: 1.5 },
+      { name: 'Sanity Studio', level: 78, category: 'design-other', yearsOfExp: 1.5 },
     ]
   }
 ];

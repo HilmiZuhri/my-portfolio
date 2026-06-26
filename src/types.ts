@@ -7,7 +7,8 @@ export interface Project {
   role: string;
   duration: string;
   category: 'web-app' | 'landing-page' | 'tool' | 'interactive';
-  imageType: 'analytics' | 'ecommerce' | 'saas' | 'code-builder';
+  imageType?: 'analytics' | 'ecommerce' | 'saas' | 'code-builder';
+  image?: string;
   githubUrl?: string;
   liveUrl?: string;
   features: string[];

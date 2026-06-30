@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Send, MapPin, Globe, Check, MessageSquareIcon } from 'lucide-react';
+import { Mail, Linkedin, Send, MapPin, Globe, Check } from 'lucide-react';
 import { PERSONAL_INFO } from '../data';
 import { ContactForm } from '../types';
 
@@ -22,11 +22,11 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMess('');
 
-    // Semantic client-side check validations
+    // Validasi client-side
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       setErrorMess('Please fill out all required fields.');
       return;
@@ -39,11 +39,47 @@ export default function Contact() {
 
     setIsSubmitting(true);
 
-    // Simulate mock API posting
-    setTimeout(() => {
+    // Ambil access key dari environment variable atau file data
+    const accessKey = 
+      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 
+      (PERSONAL_INFO as any).web3forms_key || 
+      "";
+
+    if (!accessKey) {
+      setErrorMess('Configuration error: Web3Forms Access Key is missing.');
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1200);
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || `New message from ${formData.name}`,
+          message: formData.message,
+          from_name: "Portfolio Contact Form"
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+      } else {
+        setErrorMess(data.message || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      setErrorMess('An error occurred. Please check your network connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetForm = () => {
@@ -75,7 +111,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-5xl mx-auto items-start">
           
-          {/* Quick connection coordinates - 5 cols */}
+          {/* Quick connection coordinates */}
           <div className="lg:col-span-5 space-y-6">
             <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 space-y-8">
               <h3 className="text-lg font-bold text-white tracking-tight uppercase">
@@ -85,7 +121,7 @@ export default function Contact() {
               <div className="space-y-6">
                 {/* Email detail */}
                 <div className="flex gap-4 items-start">
-                  <div className="p-3 rounded-xl bg-slate-950 text-brand-cyan border border-slate-850 border-slate-800/80 shrink-0">
+                  <div className="p-3 rounded-xl bg-slate-950 text-brand-cyan border border-slate-800/80 shrink-0">
                     <Mail size={18} />
                   </div>
                   <div>
@@ -165,19 +201,13 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-
-            {/* Response speed label block */}
-            <div className="p-4 rounded-xl bg-slate-900/15 border border-slate-800/40 text-xs text-slate-500 font-mono text-center">
-              🔒 Built-in Spam Protection. Messages dispatched through client-side buffer.
-            </div>
           </div>
 
-          {/* Interactive contact input workspace - 7 cols */}
+          {/* Interactive contact input workspace */}
           <div className="lg:col-span-7">
             <div className="p-6 sm:p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 relative overflow-hidden min-h-[440px] flex flex-col justify-center">
               
               {!isSubmitted ? (
-                // Message submit form layout
                 <form id="contact-form" onSubmit={handleFormSubmit} className="space-y-5">
                   <h3 className="text-lg font-bold text-white tracking-tight uppercase mb-2">
                     Send a Message
@@ -261,14 +291,13 @@ export default function Contact() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    id="contact-submit-btn"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-blue hover:bg-brand-blue/90 disabled:bg-slate-800 text-white font-bold text-sm uppercase tracking-wider transition-all scale-100 hover:scale-[1.01] active:scale-95 shadow-md shadow-brand-blue/10 cursor-pointer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-blue hover:bg-brand-blue/90 disabled:bg-slate-850 disabled:text-slate-500 text-white font-bold text-sm uppercase tracking-wider transition-all scale-100 hover:scale-[1.01] active:scale-95 shadow-md shadow-brand-blue/10 cursor-pointer"
                   >
                     {isSubmitting ? (
                       <>
-                        <span className="w-4 h-4 rounded-full border-2 border-white/30 border-t-white animate-spin mr-1" />
-                        Encrypting & Dispatching...
+                        <span className="w-4 h-4 rounded-full border-2 border-slate-500 border-t-white animate-spin mr-1" />
+                        Sending...
                       </>
                     ) : (
                       <>
@@ -277,7 +306,6 @@ export default function Contact() {
                       </>
                     )}
                   </button>
-
                 </form>
               ) : (
                 // Success Dispatch state screen
@@ -296,7 +324,7 @@ export default function Contact() {
                   </div>
 
                   {/* Summary receipt of sent context */}
-                  <div className="p-4 rounded-xl bg-slate-950 border border-slate-850 border-slate-850 text-left font-mono text-xs text-slate-405 text-slate-400 max-w-md mx-auto">
+                  <div className="p-4 rounded-xl bg-slate-950 border border-slate-850 text-left font-mono text-xs text-slate-400 max-w-md mx-auto">
                     <div className="flex justify-between border-b border-slate-800/80 pb-2 mb-2 font-bold text-slate-300">
                       <span>DISPATCH SUMMARY</span>
                       <span className="text-emerald-400">STATUS: OK</span>

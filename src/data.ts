@@ -4,15 +4,15 @@ import { Project, SkillGroup, ExperienceItem, Testimonial } from './types';
 export const PERSONAL_INFO = {
   name: 'Hilmi Zuhri',
   title: 'Web Developer',
-  bio: 'A passionate developer specializing in crafting premium, performant, and responsive web user interfaces. With 2+ years of professional front-end experience, I bridge the gap between design systems and semantic, maintainable code using React, TypeScript, and modern styling solutions.',
+  bio: 'A passionate developer focused on building performant, responsive, and user-friendly web experiences. I turn ideas into clean, maintainable interfaces using React, TypeScript, and modern web technologies, with a strong interest in full-stack development.',
   location: 'Jakarta, Indonesia (Available for Remote Work)',
   email: 'zuhri.hilmi@gmail.com',
   github: 'https://github.com/hilmizuhri',
   linkedin: 'https://www.linkedin.com/in/hilmi-zuhri-96b9a62b8',
   avatarInitials: 'HZ',
-  experienceYears: 2,
-  completedProjects: 14,
-  coffeeConsumed: '1,200+',
+  experienceYears: 'WEB DEVELOPMENT',
+  completedProjects: 'PROJECTS',
+  coffeeConsumed: 'BASED IN',
 };
 
 export const PROJECTS: Project[] = [

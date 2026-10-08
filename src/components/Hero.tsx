@@ -96,32 +96,24 @@ export default function Hero() {
             </div>
 
             {/* Professional Numbers Grid */}
-            <div className="grid grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-slate-800/80 max-w-lg">
-              <div>
-                <p className="text-3xl sm:text-4xl font-extrabold text-white">
-                  {PERSONAL_INFO.experienceYears}+
-                </p>
-                <p className="text-xs sm:text-sm font-medium font-mono text-slate-500 uppercase mt-1">
-                  Years Exp
-                </p>
-              </div>
-              <div>
-                <p className="text-3xl sm:text-4xl font-extrabold text-white">
-                  {PERSONAL_INFO.completedProjects}+
-                </p>
-                <p className="text-xs sm:text-sm font-medium font-mono text-slate-500 uppercase mt-1">
-                  Projects Done
-                </p>
-              </div>
-              <div>
-                <p className="text-3xl sm:text-4xl font-extrabold text-white">
-                  {PERSONAL_INFO.coffeeConsumed}
-                </p>
-                <p className="text-xs sm:text-sm font-medium font-mono text-slate-500 uppercase mt-1">
-                  Coffees Had
-                </p>
-              </div>
-            </div>
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 pt-8 border-t border-slate-800/80 max-w-lg">
+  <div>
+    <p className="text-xl sm:text-2xl font-extrabold text-white">
+      {PERSONAL_INFO.experienceYears}
+    </p>
+    <p className="text-xs sm:text-sm font-medium font-mono text-slate-500 uppercase mt-1">
+      React + TypeScript
+    </p>
+  </div>
+  <div>
+    <p className="text-xl sm:text-2xl font-extrabold text-white">
+      {PERSONAL_INFO.completedProjects}
+    </p>
+    <p className="text-xs sm:text-sm font-medium font-mono text-slate-500 uppercase mt-1">
+      Web + Full-Stack
+    </p>
+  </div>
+</div>
           </div>
 
           {/* IDE/Visual Layout Preview Mockup - 5 cols */}
@@ -154,34 +146,30 @@ export default function Hero() {
                   <span className="text-teal-300">'{PERSONAL_INFO.title}'</span>,
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-500">experience:</span>{' '}
-                  <span className="text-amber-300">'{PERSONAL_INFO.experienceYears}+ Years'</span>,
-                </div>
-                <div className="pl-4">
                   <span className="text-slate-500">focus:</span> [
-                  <span className="text-teal-300">'UI Kit Dev'</span>,{' '}
-                  <span className="text-teal-300">'Single Page Apps'</span>
+                  <span className="text-teal-300">'Frontend'</span>,{' '}
+                  <span className="text-teal-300">'Full-Stack'</span>
                   ],
                 </div>
                 <div className="pl-4">
-                  <span className="text-slate-500">favoriteStack:</span> &#123;
+                  <span className="text-slate-500">stack:</span> &#123;
                 </div>
                 <div className="pl-8">
                   <span className="text-slate-500">core:</span>{' '}
-                  <span className="text-teal-300">'React 19 & TypeScript'</span>,
+                  <span className="text-teal-300">'React & TypeScript'</span>,
                 </div>
                 <div className="pl-8">
                   <span className="text-slate-500">styling:</span>{' '}
-                  <span className="text-teal-300">'Tailwind CSS'</span>,
+                  <span className="text-teal-300">'Tailwind CSS & ShadCN UI'</span>,
                 </div>
                 <div className="pl-8">
-                  <span className="text-slate-500">build:</span>{' '}
-                  <span className="text-teal-300">'Vite'</span>
+                  <span className="text-slate-500">backend:</span>{' '}
+                  <span className="text-teal-300">'Node.js'</span>
                 </div>
                 <div className="pl-4">&#125;,</div>
                 <div className="pl-4">
                   <span className="text-slate-500">status:</span>{' '}
-                  <span className="text-teal-300">'Ready for opportunities'</span>
+                  <span className="text-teal-300">'Open for opportunities'</span>
                 </div>
                 <div>&#125;;</div>
               </div>

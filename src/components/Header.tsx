@@ -126,7 +126,7 @@ export default function Header({ activeSection }: HeaderProps) {
                 onClick={(e) => handleNavClick(e, '#contact')}
                 className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-lg border border-brand-cyan/20 bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan text-xs font-semibold tracking-wide uppercase transition-all"
               >
-                Hire Me
+                Contact Me
                 <ArrowUpRight size={14} />
               </a>
             </div>

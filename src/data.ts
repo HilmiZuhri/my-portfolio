@@ -125,35 +125,38 @@ export const PROJECTS: Project[] = [
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     id: 'frontend-core',
-    title: 'Core Front-End Development',
+    title: 'Front-End Development',
     skills: [
-      { name: 'React.js (v18-19)', level: 90, category: 'frontend', yearsOfExp: 2 },
+      { name: 'React', level: 90, category: 'frontend', yearsOfExp: 2 },
       { name: 'TypeScript', level: 85, category: 'frontend', yearsOfExp: 2 },
-      { name: 'Tailwind CSS (v3-v4)', level: 95, category: 'frontend', yearsOfExp: 2 },
-      { name: 'HTML5 & Semantic SEO', level: 92, category: 'frontend', yearsOfExp: 2 },
-      { name: 'CSS3 / Modern Layouts (Grid/Flex)', level: 90, category: 'frontend', yearsOfExp: 2 },
+      { name: 'Javascript', level: 95, category: 'frontend', yearsOfExp: 2 },
+      { name: 'Tailwind CSS', level: 92, category: 'frontend', yearsOfExp: 2 },
+      { name: 'HTML5', level: 92, category: 'frontend', yearsOfExp: 2 },
+      { name: 'CSS3', level: 90, category: 'frontend', yearsOfExp: 2 },
     ]
   },
   {
     id: 'tools-build',
-    title: 'Frameworks Tools & Building',
+    title: 'Backend & Development Tools',
     skills: [
-      { name: 'Next.js (App Router)', level: 80, category: 'tools-libs', yearsOfExp: 1 },
-      { name: 'Vite & esbuild', level: 88, category: 'tools-libs', yearsOfExp: 2 },
-      { name: 'Git & GitHub Collaboration', level: 86, category: 'tools-libs', yearsOfExp: 2 },
-      { name: 'Motion / Framer Motion', level: 85, category: 'tools-libs', yearsOfExp: 1 },
-      { name: 'ShadCN UI', level: 90, category: 'tools-libs', yearsOfExp: 2 },
+      { name: 'Next.js', level: 80, category: 'tools-libs', yearsOfExp: 1 },
+      { name: 'Node.js', level: 88, category: 'tools-libs', yearsOfExp: 2 },
+      { name: 'Git & GitHub', level: 86, category: 'tools-libs', yearsOfExp: 2 },
+      { name: 'Laravel', level: 85, category: 'tools-libs', yearsOfExp: 1 },
+      { name: 'REST API', level: 90, category: 'tools-libs', yearsOfExp: 2 },
+      { name: 'MySQL', level: 80, category: 'tools-libs', yearsOfExp: 1 },
     ]
   },
   {
     id: 'other-skills',
-    title: 'Other Skills',
+    title: 'Additional',
     skills: [
-      { name: 'Machine Learning Fundamentals', level: 82, category: 'design-other', yearsOfExp: 2 },
+      { name: 'Machine Learning', level: 82, category: 'design-other', yearsOfExp: 2 },
       { name: 'Java', level: 88, category: 'design-other', yearsOfExp: 2 },
       { name: 'Python', level: 95, category: 'design-other', yearsOfExp: 2 },
-      { name: 'RESTful API Integration', level: 85, category: 'design-other', yearsOfExp: 2 },
-      { name: 'Sanity Studio', level: 78, category: 'design-other', yearsOfExp: 1.5 },
+      { name: 'Vite', level: 85, category: 'design-other', yearsOfExp: 2 },
+      { name: 'Shad CN UI', level: 78, category: 'design-other', yearsOfExp: 1.5 },
+      { name: 'Sanity CMS', level: 80, category: 'design-other', yearsOfExp: 1.5 },
     ]
   }
 ];

@@ -39,24 +39,28 @@ export const PROJECTS: Project[] = [
     techStack: ['React 19', 'TypeScript 5', 'Tailwind CSS v4', 'lucide-react', 'framer Motion', 'localStorage Persistence']
   },
   {
-    id: 'aura-ui-sandbox',
-    title: 'Aura UI Sandbox',
-    shortDescription: 'A dynamic visual playground for inspecting and generating semantic, standard-compliant Tailwind CSS design variables.',
-    detailedDescription: 'Aura UI Sandbox is an expert developer playground built to streamline UI prototyping. It provides direct, interactive knobs to tweak component typography, borders, shadows, and interactive state modifiers, instantly rendering standard CSS tailwind code snippets.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Canvas Renderer'],
-    role: 'Frontend Architect',
-    duration: '1 Month',
+    id: 'laptop-recommender-system',
+    title: 'Laptop Recommendation System',
+    shortDescription: 'An NLP-powered web application that predicts laptop categories from user requirements and displays relevant laptop options.',
+    detailedDescription: 'Developed as an undergraduate thesis project, this web application combines FastText and Random Forest to process natural language input and predict suitable laptop categories. The system integrates a Flask API with a PHP-based web interface and retrieves matching laptop options from a JSON dataset based on the predicted category.',
+    
+    tags: ['Natural Language Processing', 'Web Development', 'Machine Learning'],
+    role: 'Machine Learning & Web Developer',
+    duration: '3 Months',
     category: 'tool',
     imageType: 'code-builder',
-    githubUrl: 'https://github.com/hilmizuhri/aura-ui-canvas',
+    image: '/assets/skripsi.png',
+    githubUrl: 'https://github.com/HilmiZuhri/Laptop-recommender-system-using-FastText-and-Random-Forest',
     liveUrl: '#',
     features: [
-      'Real-time component generator showing interactive buttons, inputs, and cards.',
-      'Dynamic variable control panel mimicking popular utility systems.',
-      'Instant copy-to-clipboard system generating responsive, access-compliant HTML/Tailwind templates.',
-      'Theme sandbox support (simulated high-contrast, emerald accents, neon glow, and pastel layouts).'
-    ],
-    techStack: ['React 19', 'TypeScript', 'Tailwind CSS', 'lucide-react', 'HTML5 Clipboard Web API']
+    'Natural language input for describing laptop requirements.',
+    'Text preprocessing to prepare user input for model inference.',
+    'FastText sentence embeddings for numerical text representation.',
+    'Random Forest classification to predict laptop categories.',
+    'Flask REST API integration with a PHP-based web interface.',
+    'Dynamic laptop listings retrieved from a JSON dataset based on the predicted category.'
+  ],
+    techStack: ['Python', 'JavaScript', 'CSS', 'FastText', 'Scikit-learn', 'Flask', 'PHP', 'HTML', 'JSON']
   },
   {
     id: 'docucraft-editor',

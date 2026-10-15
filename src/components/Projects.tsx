@@ -356,7 +356,7 @@ export default function Projects() {
                   <div className="mb-8">
                     <h4 className="flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider mb-4">
                       <Sparkles size={16} className="text-brand-cyan" />
-                      Critical Deliverables & Features
+                      Key Features
                     </h4>
                     <ul className="space-y-3.5 pl-1">
                       {selectedProject.features.map((feature, idx) => (

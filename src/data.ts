@@ -20,7 +20,7 @@ export const PROJECTS: Project[] = [
     id: 'TaskFlow',
     title: 'TaskFlow',
     shortDescription: 'A to-do list app designed to help you capture, organize, prioritize, and track your daily tasks and deadlines so you can manage your work and personal life more efficiently',
-    detailedDescription: 'TaskFlow is a highly polished, interactive task and workflow manager designed with a modern, responsive interface. It offers live status statistics, collapsible advanced search and filters, and a seamless dual-layout workspace (List View and Board View). Key highlight features include automatic deadline reminders and intuitive drag-and-drop mechanics to adjust task status or re-prioritize items in real-time.',
+    detailedDescription: 'TaskFlow is a responsive task management application built to help users organize daily tasks, manage priorities, and track deadlines. Developed as a standalone frontend project, it features multiple task views, interactive task controls, and local data persistence for a streamlined task management experience.',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'localstorage persistence', 'Motion/framer Motion'],
     role: 'Solo Project',
     duration: '2 Weeks (Current Iteration)',
@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
       'Fully-Featured Task Creation & Editing: add, edit, delete, and prioritize tasks with intuitive drag-and-drop functionality.',
       'Advanced Search & Filter System: search tasks by keywords, filter by status, priority, or due date, and save custom views for quick access.'
     ],
-    techStack: ['React 19', 'TypeScript 5', 'Tailwind CSS v4', 'lucide-react', 'framer Motion', 'localStorage Persistence']
+    techStack: ['React 19', 'TypeScript', 'Tailwind CSS 4', ':ucide React', 'Framer Motion', 'Local Storage']
   },
   {
     id: 'laptop-recommender-system',
@@ -61,26 +61,6 @@ export const PROJECTS: Project[] = [
     'Dynamic laptop listings retrieved from a JSON dataset based on the predicted category.'
   ],
     techStack: ['Python', 'JavaScript', 'CSS', 'FastText', 'Scikit-learn', 'Flask', 'PHP', 'HTML', 'JSON']
-  },
-  {
-    id: 'docucraft-editor',
-    title: 'DocuCraft Workspace',
-    shortDescription: 'A modern, split-view markdown editor and parser tailored for minimalist documentation workflows.',
-    detailedDescription: 'DocuCraft is an organic, high-performance editor that allows technical authors to format docs on the fly. Built with client-side state managers, it guarantees instant previews, structural document outline generation, and seamless local autosaving.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Local Forage'],
-    role: 'Lead Developer',
-    duration: '3 Weeks',
-    category: 'web-app',
-    imageType: 'saas',
-    githubUrl: 'https://github.com/hilmizuhri/docucraft',
-    liveUrl: '#',
-    features: [
-      'Live markdown parser translating Markdown tags to modular, semantic HTML structures instantly.',
-      'Autosave engine synchronizing draft snapshots locally using browser storage APIs.',
-      'Word count, reading time calculator, and instant full-screen distraction-free mode.',
-      'Outline visualizer dynamically compiling hierarchical sub-headers from active document lines.'
-    ],
-    techStack: ['React 19', 'TypeScript', 'Tailwind CSS v4', 'localStorage Persistence', 'lucide-react']
   },
   {
     id: 'zakiah-shop',
@@ -123,7 +103,27 @@ export const PROJECTS: Project[] = [
       'Responsive Styling & Fluid Animations: ensure optimal viewing experience across devices with modern CSS techniques.'
     ],
     techStack: ['React 19', 'Tailwind CSS v4', 'framer Motion','sanity.io', 'TypeScript']
-  }
+  },
+  {
+    id: 'company-profile',
+    title: 'Company Profile Website',
+    shortDescription: 'A responsive company profile website developed during an internship at PT Mutiara Alam Gumelar.',
+    detailedDescription: 'A company profile website developed during a web development internship at PT Mutiara Alam Gumelar. The project involved building a responsive user interface using Bootstrap, implementing interactive elements with javasscript, and deploying the website to a hosting environtment.',
+    tags: ['Bootstrap', 'Javascript', 'Web Development', 'Deployment'],
+    role: 'Web Developer Intern',
+    duration: '1 Months',
+    category: 'landing-page',
+    imageType: 'ecommerce',
+    image: '/assets/intern.png',
+    githubUrl: 'https://github.com/HilmiZuhri/PKL-Indirisma.git',
+    liveUrl: 'https://hilmizuhri.github.io/PKL-Indirisma/',
+    features: [
+      'Responsive Website Design: built a responsive layout using Bootstrap to provide a consistent user experience across devices.',
+      'Interactive User Interface: implemented interactive elements using JavaScript to enhance user engagement.',
+      'Website Deployment: handled the deployment and hosting process to make the company website accessible online.'
+    ],
+    techStack: ['Bootstrap', 'Javascript']
+  },
 ];
 
 export const SKILL_GROUPS: SkillGroup[] = [

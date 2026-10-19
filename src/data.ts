@@ -1,4 +1,8 @@
 import image from "../assets/image.png";
+import image0 from "../assets/image0.png";
+import image1 from "../assets/image1.png";
+import intern from "../assets/intern.png";
+import skripsi from "../assets/skripsi.png";
 import { Project, SkillGroup, ExperienceItem, Testimonial } from './types';
 
 export const PERSONAL_INFO = {
@@ -26,7 +30,7 @@ export const PROJECTS: Project[] = [
     duration: '2 Weeks (Current Iteration)',
     category: 'web-app',
     imageType: 'analytics',
-    image: '/assets/image1.png',
+    image: image1,
     githubUrl: 'https://github.com/HilmiZuhri/Advanced-Todolist-App-v2',
     liveUrl: 'https://advanced-todolist-app-v2.vercel.app/',
     features: [
@@ -49,7 +53,7 @@ export const PROJECTS: Project[] = [
     duration: '3 Months',
     category: 'tool',
     imageType: 'code-builder',
-    image: '/assets/skripsi.png',
+    image: skripsi,
     githubUrl: 'https://github.com/HilmiZuhri/Laptop-recommender-system-using-FastText-and-Random-Forest',
     liveUrl: '#',
     features: [
@@ -72,7 +76,7 @@ export const PROJECTS: Project[] = [
     duration: '4 Weeks',
     category: 'landing-page',
     imageType: 'ecommerce',
-    image: '/assets/image.png',
+    image: image,
     githubUrl: 'https://github.com/hilmizuhri/POS-Cashier',
     liveUrl: 'https://pos-cashier-one.vercel.app',
     features: [
@@ -94,7 +98,7 @@ export const PROJECTS: Project[] = [
     duration: '1 Weeks',
     category: 'landing-page',
     imageType: 'ecommerce',
-    image: '/assets/image0.png',
+    image: image0,
     githubUrl: 'https://github.com/hilmizuhri/Portfolio-zaidah',
     liveUrl: 'https://zaidah-izzawati.vercel.app',
     features: [
@@ -114,7 +118,7 @@ export const PROJECTS: Project[] = [
     duration: '1 Months',
     category: 'landing-page',
     imageType: 'ecommerce',
-    image: '/assets/intern.png',
+    image: intern,
     githubUrl: 'https://github.com/HilmiZuhri/PKL-Indirisma.git',
     liveUrl: 'https://hilmizuhri.github.io/PKL-Indirisma/',
     features: [

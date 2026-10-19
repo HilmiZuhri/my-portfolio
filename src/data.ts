@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   name: 'Hilmi Zuhri',
   title: 'Web Developer',
   bio: 'A passionate developer focused on building performant, responsive, and user-friendly web experiences. I turn ideas into clean, maintainable interfaces using React, TypeScript, and modern web technologies, with a strong interest in full-stack development.',
-  location: 'Jakarta, Indonesia (Available for Remote Work)',
+  location: 'Malang, Indonesia (Available for Remote Work)',
   email: 'zuhri.hilmi@gmail.com',
   github: 'https://github.com/hilmizuhri',
   linkedin: 'https://www.linkedin.com/in/hilmi-zuhri-96b9a62b8',

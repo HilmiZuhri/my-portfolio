@@ -102,10 +102,10 @@ export default function Contact() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
-            Start a Conversation
+            Let's Connect
           </h2>
           <p className="text-slate-400 text-sm sm:text-base">
-            Have a project in mind, need a contract developer, or want to discuss a permanent team role? Drop me a message, and I will get back to you within 24 hours.
+            I'm open to frontend development opportunities, freelance projects, and collaborations. Have an opportunity in mind? Feel free to send me a message.
           </p>
         </div>
 
@@ -163,7 +163,7 @@ export default function Contact() {
                       Time Zone / Active Hours
                     </span>
                     <span className="text-sm font-semibold text-slate-200 block">
-                      Jakarta (WIB) &bull; GMT+7
+                      Malang (WIB) &bull; GMT+7
                     </span>
                     <span className="text-xs text-slate-500 font-mono mt-0.5 block">
                       9:00 AM - 6:00 PM WIB (Working hours)

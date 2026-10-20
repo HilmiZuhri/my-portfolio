@@ -55,7 +55,7 @@ export const PROJECTS: Project[] = [
     imageType: 'code-builder',
     image: skripsi,
     githubUrl: 'https://github.com/HilmiZuhri/Laptop-recommender-system-using-FastText-and-Random-Forest',
-    liveUrl: '#',
+    liveUrl: 'https://laptop-recommender-system.wasmer.app/web/index.php',
     features: [
     'Natural language input for describing laptop requirements.',
     'Text preprocessing to prepare user input for model inference.',

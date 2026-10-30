@@ -3,6 +3,7 @@ import image0 from "../assets/image0.png";
 import image1 from "../assets/image1.png";
 import intern from "../assets/intern.png";
 import skripsi from "../assets/skripsi.png";
+import gemma from "../assets/gemma.png";
 import { Project, SkillGroup, ExperienceItem, Testimonial } from './types';
 
 export const PERSONAL_INFO = {
@@ -20,28 +21,6 @@ export const PERSONAL_INFO = {
 };
 
 export const PROJECTS: Project[] = [
-  {
-    id: 'TaskFlow',
-    title: 'TaskFlow',
-    shortDescription: 'A to-do list app designed to help you capture, organize, prioritize, and track your daily tasks and deadlines so you can manage your work and personal life more efficiently',
-    detailedDescription: 'TaskFlow is a responsive task management application built to help users organize daily tasks, manage priorities, and track deadlines. Developed as a standalone frontend project, it features multiple task views, interactive task controls, and local data persistence for a streamlined task management experience.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'localstorage persistence', 'Motion/framer Motion'],
-    role: 'Solo Project',
-    duration: '2 Weeks (Current Iteration)',
-    category: 'web-app',
-    imageType: 'analytics',
-    image: image1,
-    githubUrl: 'https://github.com/HilmiZuhri/Advanced-Todolist-App-v2',
-    liveUrl: 'https://advanced-todolist-app-v2.vercel.app/',
-    features: [
-      'Adaptive User Interface & Aesthetic Design: responsive layouts, dark/light mode toggle, and smooth animations.',
-      'Interactive Workspace Views: dual layout system with List View and Board View for task management.',
-      'Task Reminders & Notification Engine: automatic deadline alerts and real-time status updates.',
-      'Fully-Featured Task Creation & Editing: add, edit, delete, and prioritize tasks with intuitive drag-and-drop functionality.',
-      'Advanced Search & Filter System: search tasks by keywords, filter by status, priority, or due date, and save custom views for quick access.'
-    ],
-    techStack: ['React 19', 'TypeScript', 'Tailwind CSS 4', ':ucide React', 'Framer Motion', 'Local Storage']
-  },
   {
     id: 'laptop-recommender-system',
     title: 'Laptop Recommendation System',
@@ -65,6 +44,52 @@ export const PROJECTS: Project[] = [
     'Dynamic laptop listings retrieved from a JSON dataset based on the predicted category.'
   ],
     techStack: ['Python', 'JavaScript', 'CSS', 'FastText', 'Scikit-learn', 'Flask', 'PHP', 'HTML', 'JSON']
+  },
+  {
+    id: 'gemma-chat',
+    title: 'Gemma Chat',
+    shortDescription: 'An AI-powered chat application that integrates Google Gemma 3 1B with a custom FastAPI backend and a React-based user interface.',
+    detailedDescription: 'Developed an AI chat application powered by Google Gemma 3 1B, running on Google Colab with GPU acceleration. The application connects a React and TypeScript frontend to a custom FastAPI REST API through Ngrok, enabling users to interact with the language model through a conversational interface. It also supports multi-turn conversations, configurable response length, and real-time response handling.',
+    tags: ['AI', 'Large Language Models', 'API Integration', 'Web Development'],
+    role: 'AI & Full Stack Developer',
+    duration: 'Ongoing',
+    category: 'tool',
+    imageType: 'code-builder',
+    image: gemma,
+    githubUrl: 'https://github.com/HilmiZuhri/gemma-chat-ui',
+    liveUrl: 'https://gemma-chat-ui.vercel.app/',
+    features: [
+    'AI-powered conversations using Google Gemma 3 1B Instruction-Tuned.',
+  'GPU-accelerated model inference using Google Colab and NVIDIA Tesla T4.',
+  'Custom FastAPI REST API for handling chat requests and model responses.',
+  'Multi-turn conversations with contextual chat history.',
+  'React and TypeScript-based chat interface with a responsive dark theme.',
+  'Real-time response handling with loading indicators and error management.',
+  'Ngrok integration for exposing the Colab API through a temporary public URL.'
+  ],
+    techStack: ['Python', 'React', 'TypeScript', 'Vite', 'FastAPI', 'PyTorch', 'Hugging Face Transformers', 'Google Colab', 'Ngrok', 'CSS']
+  },
+  {
+    id: 'TaskFlow',
+    title: 'TaskFlow',
+    shortDescription: 'A to-do list app designed to help you capture, organize, prioritize, and track your daily tasks and deadlines so you can manage your work and personal life more efficiently',
+    detailedDescription: 'TaskFlow is a responsive task management application built to help users organize daily tasks, manage priorities, and track deadlines. Developed as a standalone frontend project, it features multiple task views, interactive task controls, and local data persistence for a streamlined task management experience.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'localstorage persistence', 'Motion/framer Motion'],
+    role: 'Solo Project',
+    duration: '2 Weeks (Current Iteration)',
+    category: 'web-app',
+    imageType: 'analytics',
+    image: image1,
+    githubUrl: 'https://github.com/HilmiZuhri/Advanced-Todolist-App-v2',
+    liveUrl: 'https://advanced-todolist-app-v2.vercel.app/',
+    features: [
+      'Adaptive User Interface & Aesthetic Design: responsive layouts, dark/light mode toggle, and smooth animations.',
+      'Interactive Workspace Views: dual layout system with List View and Board View for task management.',
+      'Task Reminders & Notification Engine: automatic deadline alerts and real-time status updates.',
+      'Fully-Featured Task Creation & Editing: add, edit, delete, and prioritize tasks with intuitive drag-and-drop functionality.',
+      'Advanced Search & Filter System: search tasks by keywords, filter by status, priority, or due date, and save custom views for quick access.'
+    ],
+    techStack: ['React 19', 'TypeScript', 'Tailwind CSS 4', ':ucide React', 'Framer Motion', 'Local Storage']
   },
   {
     id: 'zakiah-shop',
